@@ -9,5 +9,8 @@ jobs:
         with:
           repository: abystoma/external-workflow
           ref: branch
+          # If the external repository is private, you may need to provide a token:
+          # token: ${{ secrets.GITHUB_TOKEN }}
+      
       - name: Greetings
         run: echo "$(<greetings.txt)"
